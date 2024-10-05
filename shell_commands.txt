@@ -1,0 +1,65 @@
+Basic Shell Commands
+ls
+
+Usage: ls [options] [path]
+Description: Lists files and directories in the specified directory. By default, it shows the contents of the current directory.
+cd
+
+Usage: cd [directory]
+Description: Changes the current working directory to the specified directory. Use cd .. to go up one level.
+pwd
+
+Usage: pwd
+Description: Prints the current working directory path.
+mkdir
+
+Usage: mkdir [directory_name]
+Description: Creates a new directory with the specified name.
+rmdir
+
+Usage: rmdir [directory_name]
+Description: Removes an empty directory.
+rm
+
+Usage: rm [options] [file_name]
+Description: Removes (deletes) files or directories. Use rm -r to remove directories and their contents recursively.
+cp
+
+Usage: cp [source] [destination]
+Description: Copies files or directories from one location to another.
+mv
+
+Usage: mv [source] [destination]
+Description: Moves (renames) files or directories from one location to another.
+touch
+
+Usage: touch [file_name]
+Description: Creates a new empty file or updates the timestamp of an existing file.
+echo
+
+Usage: echo [text]
+Description: Displays the specified text or variable value in the terminal.
+cat
+
+Usage: cat [file_name]
+Description: Concatenates and displays the contents of files.
+man
+
+Usage: man [command_name]
+Description: Displays the manual page for a specified command, providing detailed information about its usage.
+grep
+
+Usage: grep [pattern] [file_name]
+Description: Searches for a specific pattern in a file and displays the matching lines.
+find
+
+Usage: find [path] -name [filename]
+Description: Searches for files and directories in a specified path that match the given name.
+chmod
+
+Usage: chmod [permissions] [file_name]
+Description: Changes the permissions of a file or directory.
+chown
+
+Usage: chown [user:group] [file_name]
+Description: Changes the owner and group of a file or directory.
