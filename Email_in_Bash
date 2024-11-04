@@ -1,0 +1,47 @@
+Automating Email in Bash
+
+1.	Mail Transfer Agent (MTA)
+A Mail Transfer Agent like Postfix, Sendmail, or Exim must be installed on the system to handle the actual delivery of emails.
+
+sudo apt update
+sudo apt install postfix
+
+
+OR, if you're using Sendmail:
+
+sudo apt update
+sudo apt install sendmail
+
+2.	Command-Line Email Tool
+
+sudo apt install mailutils
+
+On CentOS/RHEL:
+
+sudo yum install mailx
+
+Mailutils includes the mail command, which you can use in your Bash script to send emails.
+
+3.	SMTP Server (Optional for External Relaying) 
+
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_tls_security_level = encrypt
+smtp_sasl_security_options = noanonymous
+
+# Use system-wide CA certificates for TLS
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
+
+4.	Authentication Configuration for External SMTP (Optional)
+If you're using an external SMTP service (like Gmail, Amazon SES, etc.), you need to configure SMTP authentication. Create a file with your SMTP login credentials:
+•	Postfix Example (/etc/postfix/sasl_passwd):
+[smtp.gmail.com]:587 yourusername@gmail.com:yourpassword
+
+
+Then hash the file:
+
+sudo postmap /etc/postfix/sasl_passwd
+
+
